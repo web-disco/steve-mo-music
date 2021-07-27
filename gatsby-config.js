@@ -18,11 +18,10 @@ const agilityConfig = {
 
 module.exports = {
   siteMetadata: {
-    title: "Agility CMS Gatsby Starter",
+    title: "Steve Mo Music",
   },
   plugins: [
-    `gatsby-plugin-netlify`,
-   `gatsby-plugin-image`,
+    `gatsby-plugin-image`,
     `gatsby-plugin-react-helmet`,
     {
       //the name of the plugin
@@ -58,6 +57,6 @@ module.exports = {
         //the page template that will be used to render Agility CMS pages
         masterPageTemplate: "./src/AgilityPage.jsx",
       },
-    }
+    },
   ],
 }

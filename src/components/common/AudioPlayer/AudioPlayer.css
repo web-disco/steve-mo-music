@@ -1,0 +1,29 @@
+/* React H5 Audio Player Style Overrides */
+.rhap_container {
+  background-color: #ececec;
+  box-shadow: none;
+  padding: 0;
+}
+
+.rhap_container svg {
+  color: #fff;
+  background-color: #3d3d3d;
+  border-radius: 50%;
+}
+
+.rhap_download-progress,
+.rhap_progress-filled {
+  background-color: #fff;
+}
+
+.rhap_time {
+  color: #3d3d3d;
+}
+
+.rhap_progress-indicator {
+  background-color: #3d3d3d;
+}
+
+.rhap_controls-section {
+  flex: 0;
+}

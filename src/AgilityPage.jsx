@@ -2,10 +2,11 @@ import React from "react"
 import { graphql } from "gatsby"
 import agilityUtils from "./agility/utils"
 import { getPageTemplate } from "./components/agility-pageTemplates"
-import PreviewBar from "./components/common/PreviewBar"
+// import PreviewBar from "./components/common/PreviewBar"
 import SiteHeader from "./components/common/SiteHeader"
 import SiteFooter from "./components/common/SiteFooter"
 import SEO from "./components/common/SEO"
+import { motion } from "framer-motion"
 
 //Our query to get the our page data and check for a dynamic page item (agilityItem)
 export const query = graphql`
@@ -44,8 +45,14 @@ const AgilityPage = ({ pageContext, data }) => {
         keywords={viewModel.page.seo.metaKeywords}
         ogImage={viewModel.dynamicPageItem?.customFields?.image?.url}
       />
-      <PreviewBar isPreview={viewModel.isPreview} />
-      <div id="site-wrapper" className="flex flex-col min-h-screen">
+      {/* <PreviewBar isPreview={viewModel.isPreview} /> */}
+      <motion.div
+        id="site-wrapper"
+        className="flex flex-col min-h-screen"
+        exit={{ opacity: 0 }}
+        initial="initial"
+        animate="animate"
+      >
         <SiteHeader
           languageCode={viewModel.languageCode}
           isMultiLanguage={viewModel.isMultiLanguage}
@@ -54,7 +61,7 @@ const AgilityPage = ({ pageContext, data }) => {
           <AgilityPageTemplate {...viewModel} />
         </main>
         <SiteFooter />
-      </div>
+      </motion.div>
     </>
   )
 }

@@ -153,15 +153,19 @@ exports.createResolvers = args => {
 
   // here we use resolvers to resolve the data we need for linked content
   const resolvers = {
-    // on the 'agilityPost' node type
-    agilityPost: {
-      // get the sitemap node that represents this item ( i.e. /blog/my-blog-post )
+    // on the agilityProject node type...
+    agilityProject: {
+      // get the sitemap node that represents this item ( i.e. /discography/artist(s)-name )
       sitemapNode: agility.getDynamicPageItemSitemapNode(),
-
-      // get the category
-      linkedContent_agilityCategory: agility.getLinkedContentItem({
-        type: "agilityCategory",
-        linkedContentFieldName: "category",
+      // get the songs
+      songs: agility.getLinkedContentList({
+        type: "agilitySong",
+        linkedContentFieldName: "songs",
+      }),
+      // get the project type(s)
+      projectType: agility.getLinkedContentList({
+        type: "agilityProjectType",
+        linkedContentFieldName: "projectype",
       }),
     },
   }
