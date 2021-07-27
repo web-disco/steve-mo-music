@@ -6,7 +6,8 @@
 }
 
 .rhap_container:focus,
-.rhap_main:focus {
+.rhap_main:focus,
+.rhap_progress-container:focus {
   outline: none;
 }
 

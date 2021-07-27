@@ -17,7 +17,12 @@ const SiteFooter = () => {
         <div>
           <p>
             Website by{" "}
-            <a href="https://www.webdisco.digital" title="Toronto Web Design">
+            <a
+              href="https://www.webdisco.digital"
+              target="_blank"
+              rel="noopener"
+              title="Toronto Web Design"
+            >
               Web Disco
             </a>
           </p>

@@ -41,6 +41,7 @@ const ContactForm = ({ module }) => {
           href={agilityWebsiteSettings.customFields.instagram.href}
           target={agilityWebsiteSettings.customFields.instagram.target}
           title={agilityWebsiteSettings.customFields.instagram.text}
+          rel="noopener"
         >
           <FaInstagram className="mb-4 text-3xl block mx-auto" />
         </a>
