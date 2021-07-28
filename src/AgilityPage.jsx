@@ -44,16 +44,23 @@ const AgilityPage = ({ pageContext, data }) => {
       viewModel.dynamicPageItem.seo.metaDescription
   }
 
+  // set up og image variable
+  let ogImage
+
+  // determine which image to use
+  if (viewModel.dynamicPageItem?.customFields?.bannerImage) {
+    ogImage = viewModel.dynamicPageItem.customFields.bannerImage.url
+  } else {
+    ogImage = data.ogImage.customFields.socialShareImage.url
+  }
+
   return (
     <>
       <SEO
         title={viewModel.page.title}
         description={viewModel.page.seo.metaDescription}
         keywords={viewModel.page.seo.metaKeywords}
-        ogImage={
-          data.ogImage.customFields?.socialShareImage?.url ||
-          viewModel.dynamicPageItem?.customFields?.bannerImage?.url
-        }
+        ogImage={ogImage}
       />
       {/* <PreviewBar isPreview={viewModel.isPreview} /> */}
       <motion.div
