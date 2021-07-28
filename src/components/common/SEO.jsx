@@ -6,12 +6,7 @@ const SEO = ({ title, description, keywords, ogImage }) => {
     <Helmet>
       <html lang="en" />
       <meta charset="utf-8" />
-      <title>{`
-      ${
-        title === "Home"
-          ? "Steve Mo Music - Multi-talented producer, songwriter, drummer, and musician based in Toronto"
-          : `${title} | Steve Mo Music`
-      }`}</title>
+      <title>{title}</title>
       <meta name="generator" content="Agility CMS" />
       <meta name="agility_timestamp" content={new Date().toLocaleString()} />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -19,15 +14,7 @@ const SEO = ({ title, description, keywords, ogImage }) => {
       <meta name="keywords" content={keywords} />
       {ogImage && <meta property="og:image" content={ogImage} />}
       <meta name="twitter:card" conetnt="sumamry" />
-      <meta
-        name="twitter:title"
-        content={`
-      ${
-        title === "Home"
-          ? "Steve Mo Music - Multi-talented producer, songwriter, drummer, and musician based in Toronto"
-          : `${title} | Steve Mo Music`
-      }`}
-      />
+      <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       {ogImage && <meta name="twitter:image" content={ogImage} />}
     </Helmet>
