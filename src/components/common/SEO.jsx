@@ -14,7 +14,7 @@ const SEO = ({ title, description, keywords, ogImage }) => {
       <meta name="keywords" content={keywords} />
       {ogImage && <meta property="og:image" content={ogImage} />}
       <meta name="twitter:card" conetnt="sumamry" />
-      <meta name="twitter:title" content={title} />
+      <meta name="twitter:title" content={`${title} | Steve Mo Music`} />
       <meta name="twitter:description" content={description} />
       {ogImage && <meta name="twitter:image" content={ogImage} />}
     </Helmet>
