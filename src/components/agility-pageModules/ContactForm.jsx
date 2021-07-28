@@ -52,7 +52,7 @@ const ContactForm = ({ module }) => {
           </p>
           <input
             required
-            className="w-full border-2 border-bodyText p-2 mb-4"
+            className="w-full border-2 border-bodyText p-2 mb-4 rounded-none"
             type="text"
             name="first-name"
           />
@@ -65,7 +65,7 @@ const ContactForm = ({ module }) => {
             required
             type="email"
             name="email"
-            className="w-full border-2 border-bodyText p-2 mb-4"
+            className="w-full border-2 border-bodyText p-2 mb-4 rounded-none"
           />
         </label>
         <label htmlFor="Subject">
@@ -76,7 +76,7 @@ const ContactForm = ({ module }) => {
             required
             type="text"
             name="subject"
-            className="w-full border-2 border-bodyText p-2 mb-4"
+            className="w-full border-2 border-bodyText p-2 mb-4 rounded-none"
           />
         </label>
         <label htmlFor="Message">
@@ -86,7 +86,7 @@ const ContactForm = ({ module }) => {
           <textarea
             required
             name="message"
-            className="w-full border-2 border-bodyText p-2"
+            className="w-full border-2 border-bodyText p-2 rounded-none"
             rows="4"
           />
         </label>

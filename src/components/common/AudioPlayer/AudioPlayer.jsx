@@ -6,7 +6,10 @@ import "./AudioPlayer.css"
 
 const AudioPlayer = ({ song, title, type, variants }) => {
   return (
-    <motion.article className="bg-lightGrey py-2 px-4 mb-8" variants={variants}>
+    <motion.article
+      className="bg-lightGrey py-2 px-4 mb-4 md:mb-8"
+      variants={variants}
+    >
       <h3 className="text-bodyText text-md font-bold mb-1">{title}</h3>
       <p className="text-darkGrey font-medium md:font-light italic mb-1 text-xs">
         {type}

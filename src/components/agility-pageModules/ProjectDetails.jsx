@@ -105,7 +105,6 @@ const ProjectDetails = ({ dynamicPageItem }) => {
                 <AudioPlayer
                   key={index}
                   variants={fadeInUpDelayed}
-                  grid={true}
                   song={song.customFields.song?.url}
                   title={song.customFields.title}
                   type={song.customFields.projectType_TextField
