@@ -80,8 +80,6 @@ const ProjectDetails = ({ dynamicPageItem }) => {
     )
   }
 
-  console.log(songs)
-
   // if songs array length is less than or equal to 4, return list view
   if (songs.length <= 4) {
     return (

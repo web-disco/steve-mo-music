@@ -58,5 +58,18 @@ module.exports = {
         masterPageTemplate: "./src/AgilityPage.jsx",
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Steve Mo Music`,
+        short_name: `Steve Mo Music`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#000000`,
+        display: `standalone`,
+        icon: `static/favicon.png`,
+      },
+    },
+    `gatsby-plugin-offline`,
   ],
 }

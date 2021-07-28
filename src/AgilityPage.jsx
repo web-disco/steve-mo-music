@@ -20,6 +20,13 @@ export const query = graphql`
     ) {
       itemJson
     }
+    ogImage: agilityWebsiteSettings {
+      customFields {
+        socialShareImage {
+          url
+        }
+      }
+    }
   }
 `
 const AgilityPage = ({ pageContext, data }) => {
@@ -43,7 +50,10 @@ const AgilityPage = ({ pageContext, data }) => {
         title={viewModel.page.title}
         description={viewModel.page.seo.metaDescription}
         keywords={viewModel.page.seo.metaKeywords}
-        ogImage={viewModel.dynamicPageItem?.customFields?.image?.url}
+        ogImage={
+          data.ogImage.customFields?.socialShareImage?.url ||
+          viewModel.dynamicPageItem?.customFields?.bannerImage?.url
+        }
       />
       {/* <PreviewBar isPreview={viewModel.isPreview} /> */}
       <motion.div
