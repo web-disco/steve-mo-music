@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import { motion, useCycle } from "framer-motion"
+import { topBar, middleBar, bottomBar } from "../../utils/animations"
 
 const SiteHeader = ({ languageCode, isMultiLanguage }) => {
   // graphql query to fetch our sitemap & header data
@@ -45,57 +46,25 @@ const SiteHeader = ({ languageCode, isMultiLanguage }) => {
     return isThisLanguage && isTopLevelPage
   })
 
-  // top bar animation
-  const topBar = {
-    closed: {
-      rotate: 0,
-      y: 0,
-      transition: {
-        delay: 0.1,
-      },
-    },
-    open: {
-      rotate: -45,
-      y: 6,
-      transition: {
-        delay: 0.2,
-      },
-    },
-  }
-
-  // middle bar animation
-  const middleBar = {
-    closed: {
-      opacity: 1,
-      transition: {
-        delay: 0.01,
-      },
-    },
-    open: {
-      opacity: 0,
-      transition: {
-        delay: 0.01,
-      },
-    },
-  }
-
-  // bottom bar animation
-  const bottomBar = {
-    closed: {
-      rotate: 0,
-      y: 0,
-      transition: {
-        delay: 0.1,
-      },
-    },
-    open: {
-      rotate: 45,
-      y: -6,
-      transition: {
-        delay: 0.2,
-      },
-    },
-  }
+  // functions that help with menu
+  // typeof window !== "undefined" &&
+  //   window.addEventListener("resize", function(event) {
+  //     var w = document.documentElement.clientWidth
+  //     // Display result inside a div element
+  //     if (w >= 991) {
+  //       setOpen(false)
+  //     }
+  //   })
+  // typeof window !== "undefined" &&
+  //   window.addEventListener("scroll", function(event) {
+  //     var scroll = this.scrollY
+  //     const header = document.getElementById("header")
+  //     if (scroll >= 50) {
+  //       header.classList.add("sticky")
+  //     } else {
+  //       header.classList.remove("sticky")
+  //     }
+  //   })
 
   // no header available
   if (!header) {
@@ -106,7 +75,7 @@ const SiteHeader = ({ languageCode, isMultiLanguage }) => {
     )
   }
   return (
-    <header className="py-4 md:py-8">
+    <header className="py-4 md:py-8 sticky top-0 z-50 bg-white">
       <div
         className="container px-4 flex justify-between items-center"
         id="header"

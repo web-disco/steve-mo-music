@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import PageBanner from "../common/PageBanner"
 import AudioPlayer from "../common/AudioPlayer/AudioPlayer"
 import { motion } from "framer-motion"
+import { fadeInUpDelayed, stagger } from "../../utils/animations"
 
 const ProjectDetails = ({ dynamicPageItem }) => {
   // get project fields
@@ -39,34 +40,6 @@ const ProjectDetails = ({ dynamicPageItem }) => {
   // get songs
   const songs = project[0].songs
 
-  // set up easing
-  const easing = [0.6, -0.5, 0.01, 0.99]
-
-  // set up fade in up animation
-  const fadeInUp = {
-    initial: {
-      y: 60,
-      opacity: 0,
-    },
-    animate: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 2.5,
-        ease: easing,
-      },
-    },
-  }
-
-  // set up stagger
-  const stagger = {
-    animate: {
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  }
-
   // if no songs, return messaging
   if (songs.length <= 0) {
     return (
@@ -92,7 +65,7 @@ const ProjectDetails = ({ dynamicPageItem }) => {
           {songs.map((song, index) => (
             <AudioPlayer
               key={index}
-              variants={fadeInUp}
+              variants={fadeInUpDelayed}
               song={song.customFields.song?.url}
               title={song.customFields.title}
               type={song.customFields.projectType_TextField
@@ -131,7 +104,7 @@ const ProjectDetails = ({ dynamicPageItem }) => {
               {arr1.map((song, index) => (
                 <AudioPlayer
                   key={index}
-                  variants={fadeInUp}
+                  variants={fadeInUpDelayed}
                   grid={true}
                   song={song.customFields.song?.url}
                   title={song.customFields.title}
@@ -145,7 +118,7 @@ const ProjectDetails = ({ dynamicPageItem }) => {
               {arr2.map((song, index) => (
                 <AudioPlayer
                   key={index}
-                  variants={fadeInUp}
+                  variants={fadeInUpDelayed}
                   song={song.customFields.song?.url}
                   title={song.customFields.title}
                   type={song.customFields.projectType_TextField
@@ -159,7 +132,7 @@ const ProjectDetails = ({ dynamicPageItem }) => {
             {songs.map((song, index) => (
               <AudioPlayer
                 key={index}
-                variants={fadeInUp}
+                variants={fadeInUpDelayed}
                 song={song.customFields.song?.url}
                 title={song.customFields.title}
                 type={song.customFields.projectType_TextField

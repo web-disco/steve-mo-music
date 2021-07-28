@@ -25,10 +25,8 @@ const ContactForm = ({ module }) => {
   const agilityWebsiteSettings = data.agilityWebsiteSettings
 
   return (
-    <section
-      className="container px-4 text-center mb-44 max-w-xl mx-auto"
-      id="contact"
-    >
+    <section className="container px-4 text-center mb-44 max-w-xl mx-auto">
+      <div id="contact" />
       <h3 className="text-3xl uppercase mb-8">
         <span className="font-bold">{customFields.boldText}</span>{" "}
         <span className="font-light">{customFields.thinText}</span>

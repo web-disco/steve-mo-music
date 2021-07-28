@@ -3,6 +3,7 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 import SectionHeading from "../common/SectionHeading"
 import { AgilityImage } from "@agility/gatsby-image-agilitycms"
 import { motion } from "framer-motion"
+import { fadeInUp, stagger } from "../../utils/animations"
 import { ImPlay2 } from "react-icons/im"
 
 const DiscographyListing = ({ module }) => {
@@ -34,37 +35,10 @@ const DiscographyListing = ({ module }) => {
   // get projects
   const projects = data.allAgilityProject.nodes
 
-  // set up easing
-  const easing = [0.6, -0.5, 0.01, 0.99]
-
-  // set up fade in up animation
-  const fadeInUp = {
-    initial: {
-      y: 60,
-      opacity: 0,
-    },
-    animate: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 1,
-        ease: easing,
-      },
-    },
-  }
-
-  // set up stagger
-  const stagger = {
-    animate: {
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  }
-
   return (
     <>
-      <section className="container px-4 mb-8" id="discography">
+      <section className="container px-4 mb-8">
+        <div id="discography" />
         <SectionHeading
           boldText={customFields.boldText}
           thinText={customFields.thinText}
