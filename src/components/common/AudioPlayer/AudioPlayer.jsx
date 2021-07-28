@@ -8,7 +8,9 @@ const AudioPlayer = ({ song, title, type, variants }) => {
   return (
     <motion.article className="bg-lightGrey py-2 px-4 mb-8" variants={variants}>
       <h3 className="text-bodyText text-md font-bold mb-1">{title}</h3>
-      <p className="text-darkGrey font-light italic mb-1 text-xs">{type}</p>
+      <p className="text-darkGrey font-normal md:font-light italic mb-1 text-xs">
+        {type}
+      </p>
       <H5AudioPlayer
         showJumpControls={false}
         showSkipControls={false}
