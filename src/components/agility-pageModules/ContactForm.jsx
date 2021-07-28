@@ -46,8 +46,9 @@ const ContactForm = ({ module }) => {
           <FaInstagram className="mb-4 text-3xl block mx-auto" />
         </a>
       </p>
-      <form>
-        <label>
+      <form name="Contact" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="Contact" />
+        <label htmlFor="Full Name">
           <p className="text-left text-bodyText mb-2 text-sm font-light">
             Full Name
           </p>
@@ -58,7 +59,7 @@ const ContactForm = ({ module }) => {
             name="first-name"
           />
         </label>
-        <label>
+        <label htmlFor="Email Address">
           <p className="text-left text-bodyText mb-2 text-sm font-light">
             Email Address
           </p>
@@ -69,7 +70,7 @@ const ContactForm = ({ module }) => {
             className="w-full border-2 border-bodyText p-2 mb-4"
           />
         </label>
-        <label>
+        <label htmlFor="Subject">
           <p className="text-left text-bodyText mb-2 text-sm font-light">
             Subject
           </p>
@@ -80,7 +81,7 @@ const ContactForm = ({ module }) => {
             className="w-full border-2 border-bodyText p-2 mb-4"
           />
         </label>
-        <label>
+        <label htmlFor="Message">
           <p className="text-left text-bodyText mb-2 text-sm font-light">
             Message
           </p>
