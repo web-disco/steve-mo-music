@@ -15,6 +15,7 @@
   color: #fff;
   background-color: #3d3d3d;
   border-radius: 50%;
+  font-size: 26px;
 }
 
 .rhap_download-progress,
@@ -24,6 +25,7 @@
 
 .rhap_time {
   color: #3d3d3d;
+  font-size: 14px;
 }
 
 .rhap_progress-indicator {

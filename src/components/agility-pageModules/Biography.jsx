@@ -13,7 +13,8 @@ const Biography = ({ module }) => {
   const [showLess, setShowLess] = useState(true)
 
   return (
-    <section className="text-center px-4 mb-8" id="biography">
+    <section className="text-center px-4 mb-8">
+      <div id="biography" />
       <SectionHeading
         boldText={customFields.boldText}
         thinText={customFields.thinText}

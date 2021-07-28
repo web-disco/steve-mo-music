@@ -31,3 +31,36 @@ html {
 .home__banner {
   height: calc(100vh - 5rem) !important;
 }
+
+@media (min-width: 767px) {
+  #biography {
+    position: unset;
+  }
+}
+
+@media (min-width: 1024px) {
+  #biography {
+    display: block;
+    position: relative;
+    top: -350px;
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 1440px) {
+  #biography {
+    display: block;
+    position: relative;
+    top: -450px;
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 1680px) {
+  #biography {
+    display: block;
+    position: relative;
+    top: -600px;
+    visibility: hidden;
+  }
+}

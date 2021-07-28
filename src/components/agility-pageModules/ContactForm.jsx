@@ -26,7 +26,7 @@ const ContactForm = ({ module }) => {
 
   return (
     <section
-      className="container px-4 text-center mb-8 max-w-xl mx-auto"
+      className="container px-4 text-center mb-44 max-w-xl mx-auto"
       id="contact"
     >
       <h3 className="text-3xl uppercase mb-8">
@@ -41,7 +41,7 @@ const ContactForm = ({ module }) => {
           href={agilityWebsiteSettings.customFields.instagram.href}
           target={agilityWebsiteSettings.customFields.instagram.target}
           title={agilityWebsiteSettings.customFields.instagram.text}
-          rel="noopener"
+          rel="noopener noreferrer"
         >
           <FaInstagram className="mb-4 text-3xl block mx-auto" />
         </a>

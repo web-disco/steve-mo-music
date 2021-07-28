@@ -83,7 +83,7 @@ const DiscographyListing = ({ module }) => {
                 <Link to={path} title={title}>
                   <div className="relative mb-2 group">
                     <AgilityImage image={squareImage} layout="fullWidth" />
-                    <div className="absolute w-100 h-100 bg-black bg-opacity-20 inset-0 flex justify-end items-end p-2 md:bg-none md:bg-opacity-0 md:group-hover:bg-black md:group-hover:bg-opacity-25 transition duration-300 ease-in-out">
+                    <div className="absolute w-100 h-100 bg-black bg-opacity-20 inset-0 flex justify-end items-end p-2 md:bg-none md:bg-opacity-0 md:group-hover:bg-black md:group-hover:bg-opacity-30 transition duration-300 ease-in-out">
                       <ImPlay2 className="text-white text-2xl md:hidden" />
                       <p className="hidden text-white text-base md:text-sm md:flex md:items-center md:opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
                         <span className="mr-2">Listen Now</span>

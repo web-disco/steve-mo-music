@@ -20,7 +20,7 @@ const SiteFooter = () => {
             <a
               href="https://www.webdisco.digital"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               title="Toronto Web Design"
             >
               Web Disco
