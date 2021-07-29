@@ -16,9 +16,12 @@ const agilityConfig = {
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
+const url = "https://www.stevemomusic.com"
+
 module.exports = {
   siteMetadata: {
     title: "Steve Mo Music",
+    siteUrl: "https://www.stevemomusic.com",
   },
   plugins: [
     `gatsby-plugin-image`,
@@ -58,6 +61,7 @@ module.exports = {
         masterPageTemplate: "./src/AgilityPage.jsx",
       },
     },
+
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

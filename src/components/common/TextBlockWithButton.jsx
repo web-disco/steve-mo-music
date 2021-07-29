@@ -17,7 +17,9 @@ const TextBlockWithButton = ({
         <h1 className="uppercase font-bold text-4xl md:text-7xl mb-4">
           {boldText} <span className="font-light">{thinText}</span>
         </h1>
-        <p className="italic font-light text-bodyText mb-4">{description}</p>
+        <p className="italic font-light text-bodyText mb-4 text-center">
+          {description}
+        </p>
         <Link
           to={link}
           title={linkTitle}
