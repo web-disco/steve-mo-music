@@ -3,7 +3,11 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 import { motion, useCycle } from "framer-motion"
 import { topBar, middleBar, bottomBar } from "../../utils/animations"
 
-const SiteHeader = ({ languageCode, isMultiLanguage }) => {
+const SiteHeader = () => {
+  // set up for header links
+  const languageCode = "en-us"
+  const isMultiLanguage = false
+
   // graphql query to fetch our sitemap & header data
   const data = useStaticQuery(graphql`
     query {
@@ -45,26 +49,6 @@ const SiteHeader = ({ languageCode, isMultiLanguage }) => {
     // return top level pages in current locale
     return isThisLanguage && isTopLevelPage
   })
-
-  // functions that help with menu
-  // typeof window !== "undefined" &&
-  //   window.addEventListener("resize", function(event) {
-  //     var w = document.documentElement.clientWidth
-  //     // Display result inside a div element
-  //     if (w >= 991) {
-  //       setOpen(false)
-  //     }
-  //   })
-  // typeof window !== "undefined" &&
-  //   window.addEventListener("scroll", function(event) {
-  //     var scroll = this.scrollY
-  //     const header = document.getElementById("header")
-  //     if (scroll >= 50) {
-  //       header.classList.add("sticky")
-  //     } else {
-  //       header.classList.remove("sticky")
-  //     }
-  //   })
 
   // no header available
   if (!header) {

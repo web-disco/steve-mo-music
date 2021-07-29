@@ -44,19 +44,37 @@ const ContactForm = ({ module }) => {
           <FaInstagram className="mb-4 text-3xl block mx-auto" />
         </a>
       </p>
-      <form name="Contact" method="POST" data-netlify="true">
+      <form
+        name="Contact"
+        method="POST"
+        data-netlify="true"
+        action="/thank-you"
+      >
         <input type="hidden" name="form-name" value="Contact" />
-        <label htmlFor="Full Name">
-          <p className="text-left text-bodyText mb-2 text-sm font-light">
-            Full Name
-          </p>
-          <input
-            required
-            className="w-full border-2 border-bodyText p-2 mb-4 rounded-none"
-            type="text"
-            name="first-name"
-          />
-        </label>
+        <div className="grid md:grid-cols-2 gap-2">
+          <label htmlFor="First Name">
+            <p className="text-left text-bodyText mb-0 md:mb-2 text-sm font-light">
+              First Name
+            </p>
+            <input
+              required
+              className="w-full border-2 border-bodyText p-2 mb-4 rounded-none"
+              type="text"
+              name="first-name"
+            />
+          </label>
+          <label htmlFor="Last Name">
+            <p className="text-left text-bodyText mb-2 text-sm font-light">
+              Last Name
+            </p>
+            <input
+              required
+              className="w-full border-2 border-bodyText p-2 mb-4 rounded-none"
+              type="text"
+              name="last-name"
+            />
+          </label>
+        </div>
         <label htmlFor="Email Address">
           <p className="text-left text-bodyText mb-2 text-sm font-light">
             Email Address

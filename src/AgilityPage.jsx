@@ -70,10 +70,7 @@ const AgilityPage = ({ pageContext, data }) => {
         initial="initial"
         animate="animate"
       >
-        <SiteHeader
-          languageCode={viewModel.languageCode}
-          isMultiLanguage={viewModel.isMultiLanguage}
-        />
+        <SiteHeader />
         <main className="flex-grow">
           <AgilityPageTemplate {...viewModel} />
         </main>
