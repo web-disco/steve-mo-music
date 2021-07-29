@@ -48,7 +48,9 @@ const ProjectDetails = ({ dynamicPageItem }) => {
           image={customFields.bannerImage}
           title={customFields.title}
         />
-        <p>no songs</p>
+        <p className="text-center italic font-light text-bodyText my-12">
+          Music coming soon...
+        </p>
       </section>
     )
   }

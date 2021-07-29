@@ -65,6 +65,8 @@ const DiscographyListing = ({ module }) => {
                       </p>
                     </div>
                   </div>
+                </Link>
+                <Link to={path} title={title}>
                   <p className="text-center text-xs font-medium text-bodyText md:text-sm">
                     {title}
                   </p>
