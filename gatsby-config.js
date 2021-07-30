@@ -61,7 +61,33 @@ module.exports = {
         masterPageTemplate: "./src/AgilityPage.jsx",
       },
     },
-
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        query: `
+        {
+          allSitePage(filter: {path: {ne: "/home"}}) {
+            nodes {
+              path
+            }
+          }
+        }
+        `,
+        excludes: ["/thank-you", "/discography/discography-dynamic"],
+        resolveSiteUrl: () => url,
+        resolvePages: ({ allSitePage: { nodes: allPages } }) => {
+          return allPages.map(page => {
+            return page
+          })
+        },
+        serialize: ({ path }) => {
+          return {
+            url: path,
+          }
+        },
+      },
+    },
+    `gatsby-plugin-robots-txt`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
