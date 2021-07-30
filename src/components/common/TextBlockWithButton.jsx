@@ -1,5 +1,4 @@
 import React from "react"
-import SiteHeader from "./SiteHeader"
 import { Link } from "gatsby"
 
 const TextBlockWithButton = ({
@@ -12,7 +11,6 @@ const TextBlockWithButton = ({
 }) => {
   return (
     <div>
-      <SiteHeader />
       <section className="w-screen h-screen flex flex-col justify-center items-center px-4">
         <h1 className="uppercase font-bold text-4xl md:text-7xl mb-4">
           {boldText} <span className="font-light">{thinText}</span>
