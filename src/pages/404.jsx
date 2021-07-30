@@ -15,7 +15,7 @@ const Error404 = () => {
         linkText="Return Home"
         linkTitle="Return Home"
       />
-      <Footer />
+      <SiteFooter />
     </>
   )
 }
