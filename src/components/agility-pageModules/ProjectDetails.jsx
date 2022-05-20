@@ -10,23 +10,26 @@ const ProjectDetails = ({ dynamicPageItem }) => {
   const { customFields } = dynamicPageItem
 
   const data = useStaticQuery(graphql`
-    query {
-      allAgilityProject {
-        nodes {
-          contentID
-          songs {
-            customFields {
-              title
-              projectType_TextField
-              song {
-                label
-                url
-              }
+  {
+    allAgilityProject {
+      nodes {
+        contentID
+        songs {
+          customFields {
+            title
+            projectType_TextField
+            song {
+              label
+              url
             }
+          }
+          properties {
+            itemOrder
           }
         }
       }
     }
+  }  
   `)
 
   // get all projects
@@ -38,7 +41,7 @@ const ProjectDetails = ({ dynamicPageItem }) => {
   )
 
   // get songs
-  const songs = project[0].songs
+  const songs = project[0].songs.sort((a, b) => a.properties.itemOrder - b.properties.itemOrder)
 
   // if no songs, return messaging
   if (songs.length <= 0) {
