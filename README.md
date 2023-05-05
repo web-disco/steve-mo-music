@@ -1,6 +1,6 @@
 # Steve Mo Music
 
-Website for Steve Mo Music (Steve Molella)
+Website for Steve Mo Music (Steve Molella).
 
 [View Live Site](https://www.stevemomusic.ca)
 
